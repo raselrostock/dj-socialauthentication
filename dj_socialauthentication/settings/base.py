@@ -20,7 +20,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Installed App
-    # 'core.apps.CoreConfig'
+    'pages.apps.PagesConfig'
 ]
 
 
@@ -85,6 +85,9 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'assets')]
 
+
+LOGIN_REDIRECT_URL = 'pages:home'
+LOGOUT_REDIRECT_URL = 'pages:home'
 
 ################################
 ##      WSGI CONFIGURATION    ##

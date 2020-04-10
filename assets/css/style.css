@@ -1,0 +1,61 @@
+.bg-rlre {
+  background: #293A89 !important;
+}
+
+.text-secondary {
+  color: #293A89 !important;
+}
+
+.btn-secondary {
+  color: #fff !important;
+}
+
+img {
+  width: 100%;
+}
+
+.logo {
+  width: 80px;
+}
+
+.navbar {
+  opacity: 0.9;
+  text-transform: uppercase;
+}
+#site {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  min-height: 100vh;
+}
+
+.site-wrapper {
+  min-height: 100vh;
+  width: 100%;
+}
+.site-content {
+  margin: 30px auto;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
+}
+
+@media (max-width: 991px) {
+  
+}
+
+@media (max-width: 768px) {
+  
+
+  #top-bar {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  
+}

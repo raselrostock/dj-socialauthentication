@@ -20,7 +20,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Installed App
-    'pages.apps.PagesConfig'
+    'pages.apps.PagesConfig',
+    # Thirdparty App
+    'social_django'
 ]
 
 
@@ -55,6 +57,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # Social Authentication
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -89,6 +94,17 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'assets')]
 LOGIN_REDIRECT_URL = 'pages:home'
 LOGOUT_REDIRECT_URL = 'pages:home'
 
+################################
+##    SOCIAL AUTHENTICATION   ##
+################################
+
+AUTHENTICATION_BACKENDS = [
+    'social_core.backends.facebook.FacebookOAuth2',
+    'django.contrib.auth.backends.ModelBackend'
+]
+
+SOCIAL_AUTH_FACEBOOK_KEY = config('FB_APPID')
+SOCIAL_AUTH_FACEBOOK_SECRET = config('FB_SECRET')
 ################################
 ##      WSGI CONFIGURATION    ##
 ################################

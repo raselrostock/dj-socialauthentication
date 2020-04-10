@@ -1,0 +1,2 @@
+Custom Django Social Authentication
+==================================

@@ -100,11 +100,15 @@ LOGOUT_REDIRECT_URL = 'pages:home'
 
 AUTHENTICATION_BACKENDS = [
     'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.github.GithubOAuth2',
     'django.contrib.auth.backends.ModelBackend'
 ]
 
 SOCIAL_AUTH_FACEBOOK_KEY = config('FB_APPID')
 SOCIAL_AUTH_FACEBOOK_SECRET = config('FB_SECRET')
+
+SOCIAL_AUTH_GITHUB_KEY = config('GITHUB_APPID')
+SOCIAL_AUTH_GITHUB_SECRET = config('GITHUB_SECRET')
 ################################
 ##      WSGI CONFIGURATION    ##
 ################################
